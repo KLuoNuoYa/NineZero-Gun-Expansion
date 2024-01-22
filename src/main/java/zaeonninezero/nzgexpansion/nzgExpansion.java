@@ -24,11 +24,8 @@ public class nzgExpansion {
 		//Registers all of the Deferred Registers from the init classes.
 		initItems.ITEMS.register(bus);
 		initSounds.SOUNDS.register(bus);
-		
+		nzgCreativeTab.CREATIVE_TABS.register(bus);
 		bus.addListener(this::onClientSetup);
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
-            bus.addListener(ClientHandler::onRegisterCreativeTab);
-        });
 	}
 	
 	//Common setup
